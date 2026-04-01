@@ -1,0 +1,46 @@
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import Button from "./index";
+
+const meta: Meta<typeof Button> = {
+  title: "Components/Button",
+  component: Button,
+  parameters: {
+    layout: "centered",
+  },
+  tags: ["autodocs"],
+  argTypes: {
+    variant: { control: "select", options: ["solid", "outline", "ghost"] },
+    size: { control: "select", options: ["sm", "md", "lg"] },
+  },
+};
+
+export default meta;
+
+type Story = StoryObj<typeof Button>;
+
+export const Solid: Story = {
+  args: {
+    children: "Button",
+    variant: "solid",
+    size: "md",
+    colorscheme: "primary",
+  },
+};
+
+export const Outline: Story = {
+  args: {
+    children: "Button",
+    variant: "outline",
+    size: "md",
+    colorscheme: "primary",
+  },
+};
+
+export const Ghost: Story = {
+  args: {
+    children: "Button",
+    variant: "ghost",
+    size: "md",
+    colorscheme: "primary",
+  },
+};
