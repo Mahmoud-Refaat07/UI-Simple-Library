@@ -1,4 +1,5 @@
 import React from "react";
+import type { JSX } from "react";
 
 export type PropsOf<
   C extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<unknown>,
