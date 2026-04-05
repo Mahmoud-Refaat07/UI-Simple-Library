@@ -8,6 +8,7 @@ const meta: Meta<typeof Stack> = {
   parameters: {
     layout: "centered",
   },
+  tags: ["autodocs"],
   argTypes: {
     direction: { control: "select", options: ["row", "column"] },
     align: { control: "select", options: ["start", "center", "end"] },
